@@ -1,0 +1,92 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(205, 198, 255)
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    animation: bounceInDown 0.9s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes bounceInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateY(30px);
+    }
+    80% {
+       transform: translateY(-10px);
+    }
+    100% {
+       transform: translateY(0);
+    }
+ }
+
+.text {
+    color: rgb(0, 109, 119);
+}
+
+.next {
+    font-size: 30px;
+    text-align: center;
+}
+
+a.start:link,
+a.start:visited {
+    background-color: rgb(9, 188, 138);
+    color: rgb(0, 109, 119);
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.start:hover {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.start{
+    box-shadow: 0px 0px 20px rgba(85, 90, 87, 0.5);
+}
+
+#dogGIF {
+    display: block;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+
+
