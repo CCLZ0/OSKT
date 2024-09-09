@@ -37,7 +37,7 @@ window.addEventListener("load", (event) => {
             document.getElementsByClassName("text")[0].innerHTML = "<H1>Wait for your time to be a Sigma.</H1>";
 
 
-            var waitTime = Math.floor(Math.random() * 5001 + 1000);//commit
+            var waitTime = Math.floor(Math.random() * 5001 + 1000);
             console.log("wait time: ", waitTime)
             start = true;
 

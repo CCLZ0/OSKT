@@ -35,7 +35,6 @@ window.addEventListener("load", (event) => {
         green = true;
         pauseAudioStart();
         playAudioClick();
-        document.getElementsByClassName("text")[0].innerHTML = "<H1>Click Now!</H1>";
         greenTime = performance.now();
         console.log("Green time = ",greenTime)
     }
@@ -54,11 +53,10 @@ window.addEventListener("load", (event) => {
 
         if (!start) {
             document.getElementsByClassName("arst")[0].classList.add("d-none");
-            playAudioStart();
             document.getElementsByClassName("text")[0].style.color = "rgb(250, 242, 227)"
-            document.getElementsByClassName("text")[0].innerHTML="<H1>Wait for your time to be a Sigma.</H1>";
+            document.getElementsByClassName("text")[0].innerHTML="<H1>Listen to the sound!</H1>";
            
-            
+            playAudioStart();
             var waitTime = Math.floor(Math.random() * 5001 + 1000);
             console.log("wait time: ", waitTime)
             start = true;
