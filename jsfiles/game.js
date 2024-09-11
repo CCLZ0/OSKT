@@ -15,7 +15,7 @@ window.addEventListener("load", (event) => {
         document.body.style.backgroundColor = "rgb(75, 219, 106)";
         document.getElementsByClassName("text")[0].innerHTML = "<H1>Click Now!</H1>";
         greenTime = performance.now();
-        console.log("Green time = ", greenTime)
+        // console.log("Green time = ", greenTime) //comment when committing
     }
 
     document.getElementsByClassName("game2")[0].addEventListener("click", (event) => {
@@ -38,7 +38,7 @@ window.addEventListener("load", (event) => {
 
 
             var waitTime = Math.floor(Math.random() * 5001 + 1000);
-            console.log("wait time: ", waitTime)
+            // console.log("wait time: ", waitTime) //comment when committing
             start = true;
 
             timeoutId = setTimeout(setGreen, waitTime);
@@ -49,17 +49,20 @@ window.addEventListener("load", (event) => {
                 clearTimeout(timeoutId);
             } else {
                 clickTime = performance.now();
-                console.log("click time = ", clickTime);
+                // console.log("click time = ", clickTime); //comment when committing
                 var reactSpeed = Math.floor(clickTime - greenTime);
                 console.log("React speed: ", reactSpeed);
 
-                if (reactSpeed < 200) {
+                if (reactSpeed <= 100){
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>YOU'RE A GOD SIGMA! DID YOU CHEAT? Click to restart.</H1> <img src="img/god.png" alt="god">`;
+                }else if (reactSpeed < 200) {
                     document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Amazing job Sigma! Click to restart.</H1> <img src="img/gigachad.jpg" alt="gigachad">`;
                 } else if (reactSpeed < 250) {
                     document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Nice attempt Sigma! Click to restart.</H1> <img src="img/sigma.jpg" alt="sigma">`;
                 } else {
                     document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Looks like you're a Beta. What a disappointment. Click to restart.</H1> <img src="img/beta.jpg" alt="beta">`;
                 }
+                
                 gameFinished = true;
             }
         }
