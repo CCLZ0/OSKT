@@ -24,6 +24,12 @@ window.addEventListener("load", (event) => {
         window.location.href = "game2.html"
     })
 
+    document.getElementsByClassName("game3")[0].addEventListener("click", (event) => {
+        event.preventDefault();
+        document.body.style.visibility = "hidden";
+        window.location.href = "game3.html"
+    })
+
     window.addEventListener("click", (event) => {
         if (gameFinished) {
             resetGame();
@@ -51,16 +57,16 @@ window.addEventListener("load", (event) => {
                 clickTime = performance.now();
                 // console.log("click time = ", clickTime); //comment when committing
                 var reactSpeed = Math.floor(clickTime - greenTime);
-                console.log("React speed: ", reactSpeed);
+                // console.log("React speed: ", reactSpeed); //comment when committing
 
                 if (reactSpeed <= 100){
-                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>YOU'RE A GOD SIGMA! DID YOU CHEAT? Click to restart.</H1> <img src="img/god.png" alt="god">`;
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>YOU'RE A GOD SIGMA! DID YOU CHEAT? Click anywhere to restart.</H1> <img src="img/god.png" alt="god">`;
                 }else if (reactSpeed < 200) {
-                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Amazing job Sigma! Click to restart.</H1> <img src="img/gigachad.jpg" alt="gigachad">`;
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Amazing job Sigma! Click anywhere to restart.</H1> <img src="img/gigachad.jpg" alt="gigachad">`;
                 } else if (reactSpeed < 250) {
-                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Nice attempt Sigma! Click to restart.</H1> <img src="img/sigma.jpg" alt="sigma">`;
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Nice attempt Sigma! Click anywhere to restart.</H1> <img src="img/sigma.jpg" alt="sigma">`;
                 } else {
-                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Looks like you're a Beta. What a disappointment. Click to restart.</H1> <img src="img/beta.jpg" alt="beta">`;
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Looks like you're a Beta. What a disappointment. Click anywhere to restart.</H1> <img src="img/beta.jpg" alt="beta">`;
                 }
                 
                 gameFinished = true;

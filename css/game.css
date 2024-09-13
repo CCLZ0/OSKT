@@ -10,6 +10,8 @@ body {
 
 #webicon {
     width: 40px;
+    height: auto;
+    cursor: pointer; 
 }
 
 .page {
@@ -49,24 +51,18 @@ body {
     text-align: center;
 }
 
-a.game2:link,
-a.game2:visited {
-    background-color: rgb(9, 188, 138);
-    color: rgb(0, 109, 119);
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0px 0px 20px rgba(85, 90, 87, 0.5);
-}
-
-a.game2:hover {
+a.game1:hover,
+a.game2:hover,
+a.game3:hover {
     animation: pulse 1s infinite ease-in-out alternate;
 }
 
 a.game1:link,
-a.game1:visited {
+a.game1:visited,
+a.game2:link,
+a.game2:visited,
+a.game3:link,
+a.game3:visited {
     background-color: rgb(9, 188, 138);
     color: rgb(0, 109, 119);
     padding: 15px;
@@ -75,10 +71,6 @@ a.game1:visited {
     text-decoration: none;
     display: inline-block;
     box-shadow: 0px 0px 20px rgba(85, 90, 87, 0.5);
-}
-
-a.game1:hover {
-    animation: pulse 1s infinite ease-in-out alternate;
 }
 
 @keyframes pulse {
@@ -89,4 +81,16 @@ a.game1:hover {
     to {
         transform: scale(1.4);
     }
+}
+
+#target {
+    width: 5em;
+    z-index: 1;
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
 }

@@ -36,13 +36,19 @@ window.addEventListener("load", (event) => {
         pauseAudioStart();
         playAudioClick();
         greenTime = performance.now();
-        console.log("Green time = ",greenTime)
+        // console.log("Green time = ",greenTime) //comment when committing
     }
 
     document.getElementsByClassName("game1")[0].addEventListener("click", (event) =>{
         event.preventDefault();
         document.body.style.visibility = "hidden";
         window.location.href = "game.html"
+    })
+
+    document.getElementsByClassName("game3")[0].addEventListener("click", (event) =>{
+        event.preventDefault();
+        document.body.style.visibility = "hidden";
+        window.location.href = "game3.html"
     })
 
     window.addEventListener("click", (event) => {
@@ -58,7 +64,7 @@ window.addEventListener("load", (event) => {
            
             playAudioStart();
             var waitTime = Math.floor(Math.random() * 5001 + 1000);
-            console.log("wait time: ", waitTime)
+            // console.log("wait time: ", waitTime) //comment when committing
             start = true;
 
             timeoutId = setTimeout(setGreen, waitTime);
@@ -70,11 +76,13 @@ window.addEventListener("load", (event) => {
                 clearTimeout(timeoutId);
             } else {
                 clickTime = performance.now();
-                console.log("click time = ",clickTime);
+                // console.log("click time = ",clickTime); //comment when committing
                 var reactSpeed = Math.floor(clickTime - greenTime);
-                console.log("React speed: ", reactSpeed);
-
-                if (reactSpeed < 200) {
+                // console.log("React speed: ", reactSpeed); //comment when committing
+ 
+                if (reactSpeed <= 100){
+                    document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>YOU'RE A GOD SIGMA! DID YOU CHEAT? Click to restart.</H1> <img src="img/god.png" alt="god">`;
+                }else if (reactSpeed < 200) {
                     document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Amazing job Sigma! Click to restart.</H1> <img src="img/gigachad.jpg" alt="gigachad">`;
                 } else if (reactSpeed < 250) {
                     document.getElementsByClassName("text")[0].innerHTML = `<H1>Your Speed is ${reactSpeed}ms.<br>Nice attempt Sigma! Click to restart.</H1> <img src="img/sigma.jpg" alt="sigma">`;

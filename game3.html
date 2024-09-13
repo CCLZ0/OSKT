@@ -14,27 +14,29 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img id="webicon" src="img/backicon.png" alt="icon"></a>
-            </div>
-        </nav>
-    </header>
+    <a class="navbar-brand" href="index.html">
+        <img id="webicon" src="img/backicon.png" alt="icon">
+    </a>
     <div class="page">
         <div class="container-fluid mt-3">
             <div class="content text-center text">
-                <h1><b>Audio Reaction Sigma Trainer</b></h1>
-                <h3>When the GYATTBOOM is played, click as fast as a Sigma.</h3>
-                <h3>Click anywhere to start your training.</h3>
+                <h1><b>Sigma Aim Trainer</b></h1>
+                <h3>You have 30 seconds to aim like a Sigma. Get the highest score possible and achieve Sigma aim!</h3>
+                <h3>Click the target below to start your training.</h3>
             </div>
             <div class="content text-center arst">
                 <a class="game1" href="#">Click here for Visual Reaction Sigma Trainer</a>
-                <a class="game3" href="#">Click here for Sigma Aim Trainer</a>
+                <a class="game2" href="#">Click here for Audio Reaction Sigma Trainer</a>
+                <a class="game3 d-none" href="game3.html"></a>
+            </div>
+            <div class="content text-center">
+                <img src="img/target.png" alt="target" id="target">  <!-- Target to click on -->
             </div>
         </div>
     </div>
+    <script src="jsfiles/game3.js"></script>
 </body>
-<script src="jsfiles/game2.js"></script>
+
+<script src="jsfiles/game3.js"></script>
 
 </html>
