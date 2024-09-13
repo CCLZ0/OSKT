@@ -1,5 +1,8 @@
 html {
     scroll-behavior: smooth;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -11,7 +14,7 @@ body {
 #webicon {
     width: 40px;
     height: auto;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .page {
@@ -27,8 +30,8 @@ body {
     justify-content: center;
 }
 
-.content{
-   animation: grow 1s ease; 
+.content {
+    animation: grow 1s ease;
 }
 
 @keyframes grow {
